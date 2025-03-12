@@ -31,7 +31,7 @@ def preprocess_text(text):
     tokens = [lemmatizer.lemmatize(word) for word in tokens if word not in stop_words]
     return ' '.join(tokens)
 
-# Load saved model and TF-IDF vectorizer
+# Load saved model and TF-IDF vectorizer  (this is where we are calling the model through which to process the text)
 with open('best_model.pkl', 'rb') as f:
     model = pickle.load(f)
 with open('tfidf_vectorizer.pkl', 'rb') as f:
